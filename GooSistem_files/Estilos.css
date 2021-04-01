@@ -1,0 +1,658 @@
+/*bordes*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/*tipo de letra*/
+ }
+ body{
+    font-family: 'Exo 2', sans-serif;
+ }
+ /*Bordes del contenedor*/
+ .contenedor{
+     padding: 60px 0;
+     width: 90%;
+     max-width: 1000px;
+     margin: auto;
+     overflow: hidden;
+ }
+ /*color y alineado de secciones*/
+ .titulo{
+     color: #642a73;
+     font-size: 30px;
+     text-align: center;
+     margin-bottom: 60px;
+ }
+ /*Header*/
+ /*formato de baner y color de transparencia*/
+ header{
+     width: 100%;
+     height: 600px;
+     background: #0d111391;; 
+     /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fdfdfd, #2b062915), url(imagen/man-5782411_1920.jpg); 
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #44176960, #35103aa1), url(imagen/man-5782411_1920.jpg);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 125%;
+  background-attachment: fixed;
+  position: relative;
+ }
+ /*alineacion del menu*/
+ nav{
+     text-align: center;
+     padding: 30px 50px 0 0;
+ }
+ /*color y tama���o del texto del menu*/
+ nav > a{
+     font-size: 20px;
+     color: #ffffff;
+     font-weight: 300;
+     text-decoration: none;
+     margin-right: 10px;
+ }
+ /*color del subrayado del texto del menu*/
+ nav > a:hover{
+    text-decoration: underline;
+}
+/*centrado de texto central del banner*/
+header .textos-header{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:#ffffff;
+}
+/*texto superior central del banner*/
+.textos-header h1{
+    font-size: 50px;
+    color: #ffffff;
+}
+/*texto inferior central del banner*/
+.textos-header h2{
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+/*efecto del baner*/
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/*about us*/
+/*espaciado entre pading y segunda seccion*/
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+/*--------------logo--------------------*/
+.container-logo img{
+    align-items: center;
+}
+/*---------------------boton whatsapp-------------------------*/
+.container-redes{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-redes a{
+    margin-top: 4px;
+}
+.container-redes img{
+    width: 60px;
+    padding: 4px;
+    background: rgba(0, 0, 0,0);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 300ms;
+}
+.container-redes a:hover img{
+    background: rgba(78, 6, 54, 0.479);
+}
+/*acomoda imagen y texto de la segunda seccion*/
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*acomoda imagen con texto preciso*/
+.imagen-about-us{
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+/*numerito*/
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+/*efecto numerito*/
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 6px;
+}
+/*justificado de texto */
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+/*galeeria*/
+/*color de fondo*/
+.portafolio{
+    background: #f2f2f2;
+}
+/*acomoda imagene de galeria*/
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}/*muestra todas las imagenes con efecto de sombrita*/
+.imagen-port{
+    width: 24%;
+    margin-bottom: 20px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+/*muestra todas la imagenes ya en orden*/
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/*configura los efectos primarios de la imagen secundaria*/
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273, 91%, 27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*tama���o imagen galeria*/
+.hover-galeria img{
+    width: 50px;
+}
+/*color de texto galeria*/
+.hover-galeria p{
+    color: #ffffff;
+}
+/*aparece efecto de flechita*/
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+/*clientes*/
+/*acomoda las imagenes del area clentes*/
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*color de fondo area de texto e imagen clientes*/
+.cards .card{
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+/*manejo de imagen area clientes forma redondeada*/
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    display: block;
+}
+/*formato de letra clientes*/
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #ffffff;
+}
+/*alineacion de texto area clientes*/
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+/*servicios*/
+/*color fondo servicios*/
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+/*acomoda los items del area servicios*/
+.servicio-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*centrea los items del area servicios*/
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+/*acomoda la imagen*/
+.servicio-ind img{
+    width: 90%;
+}
+/*termina de acomodar todo en el area servicios*/
+.servicio-ind h3{
+    margin: 10px 0;
+}
+/*justifica el texto del area servicios*/
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+/*contactos*/
+/*acomodando el texto area contactos*/
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+/*centrea el texto del area contactos*/
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #cccccc;
+}
+/*centrea el solo texto*/
+.content-foo{
+    text-align: center;
+}
+/*color de texto superior y subrayado de color*/
+.content-foo h4{
+    color: #ffffff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+/*color texto inferior contactos*/
+.content-foo p{
+    color: #cccccc;
+}
+/*-----------------------servicio tecnico--------------------------*/
+#article2{
+    background: url(imagen/ServicioTecnico.png) center no-repeat;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-emphasis: center;
+}
+.art2{
+    margin: 0 auto;
+    width: 100%;
+    padding: 3%;
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+.inf3{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+.inf1{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+/*.......................boton........................
+.video-box{
+    width: 800px;
+    margin: 100px auto;
+}
+.video-box img{
+    width: 100%;
+}
+.video-box .play-btn{
+    background: #af20d3;
+    color: #fff;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 20px;
+    bottom: 0px;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+}
+.video-box .play-btn i{
+    line-height: 100px;
+    margin-left: 10px;
+}
+.video-box .play-btn:before, .video-box .play-btn:after{
+    content: '';
+    position: absolute;
+    border: 2px solid #4d0686;
+    border-radius: 50%;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+}
+.video-box .play-btn::after{
+    animation-delay: 0.5s;
+}
+@keyframes animate{
+    0%{
+        transform: scale(.5);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+/*------------------------------------------------*/
+#article1{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #af20d3;
+    text-emphasis: center;
+}
+.art1{
+    margin: 0 auto;
+    width: 100%;
+    padding: 3%;
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+.inf{
+    color: #989898;
+    font-size: 20px;
+    text-align: center;
+}
+.inf1{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+/*---------------------------------------------*/
+.social-links a{
+font-size: 18px;
+display: inline-block;
+background: #222636;
+color: #eeeeee;
+line-height: 1;
+padding: 8px 0;
+margin-right: 4px;
+border-radius: 50%;
+text-align: center;
+width: 36px;
+height: 36px;
+transition: 0.3s;
+}
+.social-links a:hover{
+    background: #4d0686;
+}
+/*parte final*/
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+/*apartir de aqui todo para pagina responsiva*/
+/*imagen superior adaptable apartir de los 500px*/
+@media screen and (max-width:900px){
+    header{
+        background-position: 65%;
+        background-size: 1850px;
+    }
+    /*texto centrado en pantalla*/
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*el texto se acopla ala pantalla*/
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+    /*imagen centrada en la parte segunda de la pagina*/
+    .imagen-about-us{
+        width: 90%;
+    }
+    /*parte galeria*/
+    /*muestra el nuevo arreglo de imagen de la seccion galeria*/
+    .imagen-port{
+        width: 44%;
+    }
+    /*area clientes*/
+    /*alineacion uno debajo del otro area galeria*/
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*cetrea el area clientes*/
+    .cards .card{
+        width: 90%;
+    }
+    /*aleja 30px uno debajo del otro*/
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+    /*area servicios*/
+    /*acomoda uno sobre el otro area serviocios*/
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+    /*centrea al atama���o del dispositivo el area servicios*/
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+    /*agrega espacios entre objetos en el area de servicios*/
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+    /*espacio entre imagen y texto*/
+    .servicio-ind img{
+        width: 90%;
+    }
+    /*logo deplazable*/
+    .container-logo{
+        
+        bottom: 100%;
+        
+   }
+    
+}
+/*responsive hasta los 250 px*/
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a{
+        margin-right: 5px;
+    }
+    .textos-header h1{
+        font-size: 35px;
+    }
+    .textos-header h2{
+        font-size: 15px;
+    }
+    .especial{
+        font-size: 45px;
+    }
+    /*segunda seccion*/
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+    /*galeria*/
+    .imagen-port{
+        width: 70%;
+        
+    }
+    /*------------------------------------*/
+    
+    /*clientes*/
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+    /*footer*/
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .content-foo h4{
+        border: none;
+    }
+    .content-foo p{
+        color: #cccccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+    .titulo-final{
+        font-size: 20px;
+    }
+    /*logo deplazable*/
+    .container-logo{
+        
+        bottom: 100%;
+        
+   }
+   /*.......................boton........................
+.video-box{
+    width: 800px;
+    margin: 100px auto;
+}
+.video-box img{
+    width: 100%;
+}
+.video-box .play-btn{
+    background: #af20d3;
+    color: #fff;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 260px;
+    bottom: 0px;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+}
+.video-box .play-btn i{
+    line-height: 100px;
+    margin-left: 10px;
+}
+.video-box .play-btn:before, .video-box .play-btn:after{
+    content: '';
+    position: absolute;
+    border: 2px solid #4d0686;
+    border-radius: 50%;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+}
+.video-box .play-btn::after{
+    animation-delay: 0.5s;
+}
+@keyframes animate{
+    0%{
+        transform: scale(.5);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+/*------------------------------------------------*/
+#article1{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #af20d3;
+    text-emphasis: center;
+}
+.art1{
+    margin: 0 auto;
+    width: 100%;
+    padding: 3%;
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+.inf{
+    color: #989898;
+    font-size: 20px;
+    text-align: center;
+}
+.inf1{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+}
+
